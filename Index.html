@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Bites Restaurant</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header>
+<div class="logo"></div>
+        <h1>Tasty Bites Restaurant</h1>
+        <p>Serving delicious meals since 2010</p>
+    </header>
+
+    <nav>
+        <button id="home-btn">Home</button>
+        <button id="menu-btn">Menu</button>
+        <button id="reservation-btn">Reservations</button>
+        <button id="contact-btn">Contact</button>
+    </nav>
+
+    <div class="cart">
+        <h3>Your Cart</h3>
+        <div id="cart-items"></div>
+        <p>Total: R<span id="cart-total">0.00</span></p>
+        <button id="checkout-btn">Checkout</button>
+    </div>
+
+    <section id="home-section">
+        <div class="special-offer" id="special-offer">
+            <h2>Today's Special: 20% Off All Pasta Dishes!</h2>
+            <p>Click to claim your coupon code</p>
+        </div>
+        <div class="hero-image">
+            <img src="logo.jpg" alt="Restaurant interior">
+        </div>
+        <h2>Welcome to Tasty Bites</h2>
+        <p>We offer a wide variety of delicious dishes made with fresh, locally-sourced ingredients.</p>
+        <p>Explore our menu or make a reservation to experience our culinary delights!</p>
+    </section>
+
+    <section id="menu-section" class="hidden">
+        <h2>Our Menu</h2>
+        <div class="menu-item">
+            <div class="menu-item-image">
+                <img src="pizza.jpg" alt="Margherita Pizza">
+            </div>
+            <div class="menu-item-details">
+                <h3>Margherita Pizza</h3>
+                <p>Classic pizza with tomato sauce, mozzarella, and basil</p>
+                <p class="price">R189</p>
+                <button class="add-to-cart" data-name="Margherita Pizza" data-price="189">Add to Cart</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="menu-item-image">
+                <img src="spaghetti.jpg" alt="Spaghetti Carbonara">
+            </div>
+            <div class="menu-item-details">
+                <h3>Spaghetti Carbonara</h3>
+                <p>Pasta with creamy egg sauce, pancetta, and parmesan</p>
+                <p class="price">R135</p>
+                <button class="add-to-cart" data-name="Spaghetti Carbonara" data-price="135">Add to Cart</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="menu-item-image">
+                <img src="salmon.jpg" alt="Grilled Salmon">
+            </div>
+            <div class="menu-item-details">
+                <h3>Grilled Salmon</h3>
+                <p>Fresh salmon with lemon butter sauce and seasonal vegetables</p>
+                <p class="price">R250</p>
+                <button class="add-to-cart" data-name="Grilled Salmon" data-price="250">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservation-section" class="hidden">
+        <h2>Make a Reservation</h2>
+        <form id="reservation-form">
+            <div>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required>
+                <div class="error" id="name-error"></div>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+                <div class="error" id="email-error"></div>
+            </div>
+            <div>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" required>
+                <div class="error" id="phone-error"></div>
+            </div>
+            <div>
+                <label for="date">Date</label>
+                <input type="date" id="date" required>
+                <div class="error" id="date-error"></div>
+            </div>
+            <div>
+                <label for="time">Time</label>
+                <input type="time" id="time" required>
+                <div class="error" id="time-error"></div>
+            </div>
+            <div>
+                <label for="guests">Number of Guests</label>
+                <select id="guests" required>
+                    <option value="">Select...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5+</option>
+                </select>
+                <div class="error" id="guests-error"></div>
+            </div>
+            <div>
+                <label for="special-requests">Special Requests</label>
+                <textarea id="special-requests" rows="3"></textarea>
+            </div>
+            <button type="submit">Submit Reservation</button>
+        </form>
+    </section>
+
+    <section id="contact-section" class="hidden">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <img src="location.jpg" alt="Our location" class="contact-image">
+            <div>
+                <p><strong>Address:</strong> 123 Main Street, Braamfontain</p>
+                <p><strong>Phone:</strong> (011) 123-4567</p>
+                <p><strong>Email:</strong> info@tastybites.com</p>
+                <p><strong>Hours:</strong> Monday-Sunday 11am-10pm</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="Script.js"></script>
+</body>
+</html>
